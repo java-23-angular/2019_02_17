@@ -1,0 +1,13 @@
+<p>User List</p>
+<div class="row">
+  <div class="col-6">
+    <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let user of userService.users; let i = index">
+        <!--<a routerLink="/info/{{user.id}}"><p>{{user.id}}</p></a>-->
+        <a [routerLink]="['/info',user.id]"><p>{{user.id}}</p></a>
+        <p>{{user.name}}</p>
+      </li>
+    </ul>
+  </div>
+</div>

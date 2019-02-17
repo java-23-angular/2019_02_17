@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-6" *ngIf="user != null; else wrongBlock">
+    <p>{{user.id}}</p>
+    <p>{{user.name}}</p>
+  </div>
+  <ng-template #wrongBlock>
+    <div class="col-6 alert alert-danger">Wrong user id</div>
+  </ng-template>
+</div>
